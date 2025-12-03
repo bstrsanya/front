@@ -7,6 +7,7 @@ export const fetchCatalog = createAsyncThunk(
     // Имитация API запроса
     await new Promise(resolve => setTimeout(resolve, 500))
     
+    // В реальном приложении:
     // const response = await fetch('/api/catalog')
     // return response.json()
     
@@ -50,4 +51,8 @@ const catalogSlice = createSlice({
 })
 
 export default catalogSlice.reducer
+
+
+
+
 

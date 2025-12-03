@@ -7,6 +7,7 @@ export const submitAuth = createAsyncThunk(
     // Имитация API запроса
     await new Promise(resolve => setTimeout(resolve, 1000))
     
+    // В реальном приложении здесь был бы API вызов
     // const response = await fetch('/api/auth', {
     //   method: 'POST',
     //   body: JSON.stringify({ name, email })
@@ -67,4 +68,8 @@ const authSlice = createSlice({
 
 export const { logout, loadAuthFromStorage } = authSlice.actions
 export default authSlice.reducer
+
+
+
+
 

@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { fetchCatalog } from '../store/slices/catalogSlice'
 
@@ -38,10 +39,16 @@ function Catalog() {
       <h2 className="catalog-title">Каталог</h2>
       <div className="catalog-grid">
         {items.map((item) => (
-          <figure key={item.id} className="catalog-item">
-            <img src={item.image} alt={item.name} />
-            <figcaption>{item.name}</figcaption>
-          </figure>
+          <Link
+            to={`/product/${item.id}`}
+            key={item.id}
+            className="catalog-item-link"
+          >
+            <figure className="catalog-item">
+              <img src={item.image} alt={item.name} />
+              <figcaption>{item.name}</figcaption>
+            </figure>
+          </Link>
         ))}
       </div>
     </section>
@@ -49,4 +56,6 @@ function Catalog() {
 }
 
 export default Catalog
+
+
 
