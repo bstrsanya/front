@@ -1,0 +1,51 @@
+/* Import existing styles */
+@import './styles.css';
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Auth page specific styles */
+.page-auth .app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-auth .app main {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-auth .app .footer {
+  flex: 0 0 auto;
+}
+
+/* Fix button links */
+.btn.secondary {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Auth error message */
+.auth-error {
+  position: absolute;
+  left: 135px;
+  top: 280px;
+  color: #ff4444;
+  font-size: 14px;
+}
+
+/* Auth submit button */
+.auth-submit-btn {
+  position: absolute;
+  left: 445px;
+  top: 300px;
+}
+
